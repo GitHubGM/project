@@ -27,27 +27,12 @@ def dict1(lines):
         if line.startswith('Student'):
             diction={'class':words[0],'name':words[1],'lastname':words[2],'age':words[3],'rost':words[4],'score_m':int(words[5]),'score_h':int(words[6]),'score_p':int(words[7])}
             list1.append(diction)
-#def dict2(lines):
-    
-   # for word in words[5:]:
-   #     if word!='-' and line.startswith('Teacher'):
-            #diction={'class':words[0],'name':words[1],'lastname':words[2],'age':words[3],'rost':words[4],'predmet':word}
-            #list2.append(diction)
-    return list1
+        for word in words[5:]:
+            if word!='-' and line.startswith('Teacher'):
+                diction={'class':words[0],'name':words[1],'lastname':words[2],'age':words[3],'rost':words[4],'predmet':word}
+                list2.append(diction)
+    return list1, list2
 
-def dict2(lines):
-   diction=dict()
-   list2=[]
-   for line in lines:
-       words = line[:-1].split(',')
-       for word in words[5:]:
-           if word!='-' and line.startswith('Teacher'):
-               diction={'class':words[0],'name':words[1],'lastname':words[2],'age':words[3],'rost':words[4],'predmet':word}
-               list2.append(diction)
-   return list2
-    
-    
-    
 if __name__=="__main__":
     text=data_loader("class.txt")
     #words=get_words(text)
