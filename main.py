@@ -38,19 +38,19 @@ print(listh)
 print(listp)
 print(listm)
 for items in listm:
-	if (maxm is None) or (i.score_m>maxm):
-		maxm=i.score_m
-		maxinfm=i.name+' '+i.lastname
+	if (maxm is None) or (items.score_m>maxm):
+		maxm=items.score_m
+		maxinfm=items.name+' '+items.lastname
 print('Max Math: ', maxm, maxinfm)
 
 for item in listh:
-	if (maxh is None) or (i.score_h>maxh):
-		maxh=i.score_h
-		maxinfh=i.name+' '+i.lastname
+	if (maxh is None) or (item.score_h>maxh):
+		maxh=item.score_h
+		maxinfh=item.name+' '+item.lastname
 print("Max History: ",maxh,maxinfh)
 
 for item in listp:
-		if (maxp is None) or (i.score_p>maxp):
-			maxp=i.score_p
-			maxinfp=i.name+' '+i.lastname
+		if (maxp is None) or (item.score_p>maxp):
+			maxp=item.score_p
+			maxinfp=item.name+' '+item.lastname
 print('Max Prog: ',maxp,maxinfp)
